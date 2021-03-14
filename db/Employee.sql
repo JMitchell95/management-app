@@ -1,0 +1,22 @@
+CREATE DATABASE Employee_db;
+USE Employee_db;
+CREATE TABLE Department(
+    ID INT NOT NULL AUTO_INCREMENT,
+    Name VARCHAR(39) NOT NULL,
+    PRIMARY KEY (ID)
+);
+CREATE TABLE Role (
+    ID INT NOT NULL AUTO_INCREMENT,
+    Title VARCHAR(30) NOT NULL,
+    Salary INT NOT NULL,
+    Department_ID INT,
+    PRIMARY KEY (ID)
+);
+CREATE TABLE Employee(
+    ID INT NOT NULL AUTO_INCREMENT,
+    First_Name VARCHAR(30) NOT NULL,
+    Last_Name VARCHAR(30) NOT NULL,
+    Role_ID INT,
+    MANAGER_ID INT,
+    PRIMARY KEY (ID)
+);
